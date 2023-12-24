@@ -9,7 +9,8 @@ export enum DirectionType {
 const useScrollFadeIn = (
   direction = DirectionType.up,
   duration = 1,
-  delay = 0
+  delay = 0,
+  threshold = 0
 ) => {
   const element = useRef<HTMLDivElement | null>(null);
 
@@ -44,7 +45,9 @@ const useScrollFadeIn = (
   );
 
   useEffect(() => {
-    const observer = new IntersectionObserver(handleScroll, { threshold: 0.7 });
+    const observer = new IntersectionObserver(handleScroll, {
+      threshold: threshold,
+    });
 
     if (element.current) {
       observer.observe(element.current);
