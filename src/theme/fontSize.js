@@ -1,4 +1,25 @@
 const fontSize = {
+  title48Bd: [
+    "48px",
+    {
+      fontWeight: "700",
+      lineHeight: "140%",
+    },
+  ],
+  caption18Sb: [
+    "18px",
+    {
+      fontWeight: "600",
+      lineHeight: "140%",
+    },
+  ],
+  heading24Md: [
+    "24px",
+    {
+      fontWeight: "500",
+      lineHeight: "160%",
+    },
+  ],
   heading24Bd: [
     "24px",
     {
