@@ -11,7 +11,7 @@ import Part6 from "@/components/Part6";
 
 export default function Home() {
   return (
-    <main className="w-full flex flex-col items-center">
+    <main className="w-screen">
       <Header />
       <Part1 />
       <Part2 />

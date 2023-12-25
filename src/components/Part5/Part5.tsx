@@ -70,15 +70,15 @@ export default function Part5() {
     "6": useScrollFadeIn(DirectionType.up, 1, 1, 0.5),
   };
   return (
-    <section className="w-full pt-[120px] pb-[100px] px-[40px] flex-col items-center bg-bg-elevation1 flex">
-      <div className="max-w-[1220px] w-full flex flex-col gap-y-[56px] justify-between">
+    <section className="mobile:pt-[60px] mobile:pb-[40px] mobile:px-5 laptop:py-[100px] laptop:px-[40px] flex-col items-center bg-bg-elevation1 flex">
+      <div className="max-w-[1220px] w-full flex flex-col laptop:gap-y-[56px] mobile:gap-y-5 justify-between">
         <div
-          className="text-title48Bd text-content-default"
+          className="laptop:text-title48Bd mobile:text-heading24Bd mobile:text-center desktop:text-start text-content-default"
           {...animatedItem[6]}
         >
           BISKIT을 먼저 만나본 사람들
         </div>
-        <ul className="grid grid-cols-3 gap-6">
+        <ul className="grid mobile:grid-cols-1 mobile:gap-y-4 laptop:grid-cols-3 laptop:gap-6">
           {reviews.map((review, index) => (
             <ReviewCard
               description={review.ko_description}
