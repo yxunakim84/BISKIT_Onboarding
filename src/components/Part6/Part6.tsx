@@ -10,7 +10,7 @@ export default function Part6() {
     2: useScrollFadeIn(DirectionType.up, 1.3, 1, 0.7),
   };
   return (
-    <section className="mobile:pt-[60px] mobile:pb-[40px] mobile:px-5 laptop:py-[100px] laptop:px-[40px] flex-col items-center bg-bg-elevation2 flex">
+    <section className="mobile:pt-[60px] mobile:pb-[40px] mobile:px-5 laptop:pt-[100px] laptop:pb-[120px] laptop:px-[40px] flex-col items-center bg-bg-elevation2 flex">
       <div className="max-w-[1220px] w-full flex flex-col mobile:gap-y-8 laptop:gap-y-[64px] items-center justify-between">
         <div>
           <div className="flex flex-col mobile:gap-y-5 laptop:gap-y-10 items-center">
