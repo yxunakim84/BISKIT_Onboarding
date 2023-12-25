@@ -12,24 +12,6 @@ export function Part1() {
   return (
     <section className="min-h-screen flex flex-col w-full items-center bg-bg-elevation2 px-[40px]">
       <div className="max-w-[1220px] w-full flex flex-col">
-        {/* header */}
-        <div className="px-5 flex justify-between h-[72px] items-center">
-          <Icon
-            name="Logo"
-            width={51}
-            height={24}
-            color={colors.content.weaker}
-          />
-          <div className="flex h-fit items-center">
-            <button className="py-[10px] px-3 text-content-weak text-heading18Bd">
-              KOR
-            </button>
-            <span className="w-[1px] h-6 bg-border-default mx-2" />
-            <button className="py-[10px] px-3 text-content-weakest text-heading18Rg">
-              ENG
-            </button>
-          </div>
-        </div>
         {/* content */}
         <section className="pt-[80px] h-full px-5 justify-between flex flex-col items-center animate-fadeIn">
           <div className="flex flex-col gap-y-[48px]">
