@@ -31,7 +31,7 @@ export default function Part2() {
             학교 인증된 진짜 우리학교 친구들과 함께해요
           </p>
         </div>
-        <div className="laptop:w-[504px] laptop:h-[504px] mobile:aspect-square w-full bg-bg-elevation3 rounded-[32px] flex justify-center items-end">
+        <div className="max-[607px]:w-[504px] max-[607px]:h-[504px] mobile:aspect-square w-full bg-bg-elevation3 rounded-[32px] flex justify-center items-end">
           <div
             className="relative laptop:w-[380px] laptop:h-[442px] mobile:w-[300px] mobile:h-[350px]"
             {...animatedItem[2]}
