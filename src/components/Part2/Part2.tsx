@@ -12,7 +12,7 @@ export default function Part2() {
     3: useScrollFadeIn(DirectionType.left, 1.6, 0.1),
   };
   return (
-    <section className="min-h-screen w-full py-[100px] px-[40px] flex-col items-center bg-bg-default flex">
+    <section className="w-full py-[100px] px-[40px] flex-col items-center bg-bg-elevation1 flex">
       <div className="max-w-[1220px] w-full flex items-center justify-between">
         <div className="pl-[40px] flex flex-col gap-y-6">
           <h4
