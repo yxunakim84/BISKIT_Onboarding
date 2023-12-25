@@ -1,6 +1,4 @@
-import Image from "next/image";
 import React from "react";
-import colors from "@/theme/colors";
 import Icon from "../Icon";
 import useScrollFadeIn, { DirectionType } from "@/hooks/useScrollFadeIn";
 
@@ -11,7 +9,7 @@ export function Part1() {
   };
   return (
     <section className="laptop:min-h-screen mobile:h-full w-full flex flex-col items-center bg-bg-elevation2">
-      <div className="laptop:max-w-[1220px] mobile:max-w-full pt-[80px] h-full px-5 justify-between flex flex-col items-center animate-fadeIn">
+      <div className="laptop:max-w-[1220px] mobile:max-w-full pt-[80px] h-full px-5 justify-between mobile:gap-y-12 laptop:gap-y-[94px] flex flex-col items-center animate-fadeIn">
         <div className="flex flex-col laptop:gap-y-[48px] mobile:gap-y-6">
           <div className="flex flex-col text-center laptop:gap-y-6 mobile:gap-y-3 items-center">
             <h4 className="laptop:text-title48Bd mobile:text-heading24Bd text-content-default text-center">
@@ -31,16 +29,12 @@ export function Part1() {
           </div>
         </div>
         <div
-          className="mobile:w-[290px] mobile:h-[520px] laptop:w-[431px] laptop:h-[776px] relative"
+          className="mobile:w-[257px] mobile:h-[270px] bg-cover bg-no-repeat laptop:w-[431px] laptop:h-[546px] relative"
           {...animatedItem[1]}
-        >
-          <Image
-            src="/assets/img/screen/home_screen.png"
-            alt="home"
-            fill
-            unoptimized
-          />
-        </div>
+          style={{
+            backgroundImage: `url(/assets/img/screen/home_screen2.png)`,
+          }}
+        ></div>
       </div>
     </section>
   );
