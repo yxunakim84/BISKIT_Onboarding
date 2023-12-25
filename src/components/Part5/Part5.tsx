@@ -71,7 +71,7 @@ export default function Part5() {
   };
   return (
     <section className="w-full pt-[120px] pb-[100px] px-[40px] flex-col items-center bg-bg-elevation1 flex">
-      <div className="max-w-[1220px] w-full flex flex-col gap-y-[56px] items-center justify-between">
+      <div className="max-w-[1220px] w-full flex flex-col gap-y-[56px] justify-between">
         <div
           className="text-title48Bd text-content-default"
           {...animatedItem[6]}
