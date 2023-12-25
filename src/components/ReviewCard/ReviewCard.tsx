@@ -17,11 +17,15 @@ export default function ReviewCard({
 }: ReviewCardProps) {
   return (
     <div
-      className="shadow-shadow-2 bg-bg-default rounded-[16px] flex flex-col gap-y-5 p-10"
+      className="shadow-shadow-2 bg-bg-default rounded-[16px] flex flex-col mobile:gap-y-4 laptop:gap-y-5 mobile:p-6 laptop:p-10"
       {...animation}
     >
-      <p className="text-content-weak text-heading20Bd">{description}</p>
-      <span className="text-content-weakest text-body16Rg">{label}</span>
+      <p className="text-content-weak mobile:text-body16Sb laptop:text-heading20Bd">
+        {description}
+      </p>
+      <span className="text-content-weakest mobile:text-body14Rg laptop:text-body16Rg">
+        {label}
+      </span>
     </div>
   );
 }
