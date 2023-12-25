@@ -18,9 +18,9 @@ export default function Home() {
       <Part2 />
       <Part3 />
       <Part4 />
-      <Part7 />
       <Part5 />
       <Part6 />
+      <Part7 />
       <Footer />
     </main>
   );
