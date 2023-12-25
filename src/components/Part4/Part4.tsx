@@ -70,7 +70,7 @@ export default function Part4() {
           </div>
 
           <div
-            className="flex overflow-x-scroll no-scrollbar mobile:justify-center desktop:justify-start mobile:gap-x-6 mobile:w-full"
+            className="flex overflow-x-scroll no-scrollbar mobile:justify-center desktop:justify-start mobile:gap-x-6 laptop:gap-x-0 mobile:w-full"
             {...animatedItem[0]}
           >
             {category_list.map((category) => (
@@ -83,7 +83,7 @@ export default function Part4() {
           </div>
         </div>
         <div
-          className="relative mobile:w-[335px] mobile:h-[335px] laptop:w-[504px] laptop:h-[504px] bg-bg-inverseWeak flex flex-col items-center rounded-[32px]"
+          className="relative shrink-0 mobile:w-[335px] mobile:h-[335px] laptop:w-[504px] laptop:h-[504px] bg-bg-inverseWeak flex flex-col items-center rounded-[32px]"
           {...animatedItem[2]}
         >
           <div className="relative mobile:w-[206px] mobile:h-[446px] laptop:w-[311px] laptop:h-[672px]">
