@@ -9,3 +9,4 @@ export { default as Sports } from "./ic_sports_fill_48.svg";
 export { default as Study } from "./ic_study_fill_48.svg";
 export { default as Culture } from "./ic_culture_fill_48.svg";
 export { default as Hobby } from "./ic_hobby_fill_48.svg";
+export { default as BISKIT_SYMBOL } from "./biskit_symbol.svg";
