@@ -31,9 +31,9 @@ export default function Part2() {
             학교 인증된 진짜 우리학교 친구들과 함께해요
           </p>
         </div>
-        <div className="max-[607px]:w-[504px] max-[607px]:h-[504px] mobile:aspect-square w-full bg-bg-elevation3 rounded-[32px] flex justify-center items-end">
+        <div className="laptop:w-[504px] laptop:h-[504px] mobile:w-[335px] mobile:h-[335px] w-full bg-bg-elevation3 rounded-[32px] flex justify-center items-end">
           <div
-            className="relative laptop:w-[380px] laptop:h-[442px] mobile:w-[300px] mobile:h-[350px]"
+            className="relative laptop:w-[380px] laptop:h-[442px] mobile:w-[275px] mobile:h-[310px]"
             {...animatedItem[2]}
           >
             <Image
@@ -43,7 +43,7 @@ export default function Part2() {
               unoptimized
             />
             <div
-              className="absolute laptop:py-2 laptop:pl-3 laptop:pr-5 mobile:py-[5px] mobile:pl-2 mobile:pr-[13px] flex laptop:gap-x-[6px] mobile:gap-x-[4px] items-center bg-[#2F384E] rounded-[71.6px] -right-8 laptop:bottom-[241px] mobile:bottom-[216px]"
+              className="absolute laptop:py-2 laptop:pl-3 laptop:pr-5 mobile:py-[5px] mobile:pl-2 mobile:pr-[13px] flex laptop:gap-x-[6px] mobile:gap-x-[4px] items-center bg-[#2F384E] rounded-[71.6px] -right-8 mobile:-right-4 laptop:bottom-[241px] mobile:bottom-[156px]"
               {...animatedItem[3]}
             >
               <Icon
