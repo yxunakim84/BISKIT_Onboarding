@@ -4,8 +4,8 @@ import colors from "@/theme/colors";
 
 export default function Header() {
   return (
-    <section className="max-w-[1220px] w-full flex flex-col bg-bg-elevation2">
-      <header className="px-5 flex justify-between h-[72px] items-center">
+    <section className="w-full flex flex-col items-center bg-bg-elevation2">
+      <header className="max-w-[1220px] w-full px-5 flex justify-between h-[72px] items-center">
         <Icon
           name="Logo"
           width={51}
