@@ -16,6 +16,7 @@ export default function Home() {
       <Part4 />
       <Part5 />
       <Part6 />
+      <div className="h-[120px] w-full bg-bg-elevation2" />
     </main>
   );
 }
