@@ -10,23 +10,22 @@ export default function Part6() {
     2: useScrollFadeIn(DirectionType.up, 1.3, 1, 0.7),
   };
   return (
-    <section className="w-full py-[120px] px-[40px] flex-col items-center bg-bg-elevation2 flex">
-      <div className="max-w-[1220px] w-full flex flex-col gap-y-[64px] items-center justify-between">
+    <section className="mobile:pt-[60px] mobile:pb-[40px] mobile:px-5 laptop:py-[100px] laptop:px-[40px] flex-col items-center bg-bg-elevation2 flex">
+      <div className="max-w-[1220px] w-full flex flex-col mobile:gap-y-8 laptop:gap-y-[64px] items-center justify-between">
         <div>
-          <div className="flex flex-col gap-y-[40px] items-center">
+          <div className="flex flex-col mobile:gap-y-5 laptop:gap-y-10 items-center">
             <div
-              className="bg-[#0C1142] w-[88px] h-[88px] rounded-[22px] flex flex-col items-center justify-center"
+              className="bg-[#0C1142] laptop:w-[88px] laptop:h-[88px] mobile:w-[64px] mobile:h-[64px] rounded-[22px] flex flex-col items-center justify-center"
               {...animatedItem[0]}
             >
               <Icon
                 name="BISKIT_SYMBOL"
-                width={47}
-                height={37}
                 color={colors.bg.primary}
+                className="mobile:w-[34px] mobile:h-[30px] laptop:w-[64px] laptop:h-[37px]"
               />
             </div>
             <div
-              className="text-title48Bd text-content-default text-center"
+              className="mobile:text-heading24Bd laptop:text-title48Bd text-content-default text-center"
               {...animatedItem[1]}
             >
               글로벌한 대학생활,
@@ -36,14 +35,14 @@ export default function Part6() {
           </div>
         </div>
         <div className="flex gap-x-4 justify-center" {...animatedItem[2]}>
-          <button className="p-4 w-fit rounded-[12px] flex bg-bg-inverseWeak text-content-inverse text-caption18Sb">
+          <button className="mobile:w-fit laptop:w-[180px] justify-center p-4 mobile:px-5 laptop:px-4 w-fit rounded-[12px] flex bg-bg-inverseWeak text-content-inverse text-caption18Sb">
             <Icon name="Apple" width={24} height={24} />
             <span className="px-1">App Store</span>
           </button>
-          <button className="p-4 w-fit rounded-[12px] flex bg-bg-inverseWeak text-content-inverse text-caption18Sb">
+          {/* <button className="p-4 w-fit rounded-[12px] flex bg-bg-inverseWeak text-content-inverse text-caption18Sb">
             <Icon name="Google" width={24} height={24} />
             <span className="px-1">Google Play</span>
-          </button>
+          </button> */}
         </div>
       </div>
     </section>
