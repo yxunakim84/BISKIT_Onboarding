@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className={pretendard.className}>
-      <body id="body" className="bg-bg-elevation2 h-screen antialiased">
+      <body id="body" className="h-screen antialiased">
         {children}
       </body>
     </html>
