@@ -38,7 +38,7 @@ export default function Home() {
       setDevice("Unknown");
     }
   }, []);
-  
+
   return (
     <main className="w-screen">
       <Header />
