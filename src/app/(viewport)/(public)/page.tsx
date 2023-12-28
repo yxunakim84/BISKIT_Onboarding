@@ -9,21 +9,35 @@ import Part4 from "@/components/Part4";
 import Part5 from "@/components/Part5";
 import Part6 from "@/components/Part6";
 import Part7 from "@/components/Part7";
-import * as os from "os";
+import { DeviceType } from "@/types/device";
 
 export default function Home() {
-  const platform: NodeJS.Platform = os.platform();
+  function detectDevice(userAgent: string): DeviceType {
+    if (/Android/i.test(userAgent)) {
+      return "Android";
+    } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
+      return "iOS";
+    } else if (/Mac/i.test(userAgent)) {
+      return "Mac";
+    } else if (/Windows/i.test(userAgent)) {
+      return "Windows";
+    } else {
+      return "Unknown";
+    }
+  }
+  const userAgent = navigator.userAgent;
+  const device = detectDevice(userAgent);
 
   return (
     <main className="w-screen">
       <Header />
-      <Part1 platform={platform} />
+      <Part1 device={device} />
       <Part2 />
       <Part3 />
       <Part4 />
       <Part5 />
       <Part6 />
-      <Part7 platform={platform} />
+      <Part7 device={device} />
       <Footer />
     </main>
   );
