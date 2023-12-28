@@ -1,8 +1,13 @@
 import React from "react";
 import Icon from "../Icon";
 import useScrollFadeIn, { DirectionType } from "@/hooks/useScrollFadeIn";
+import Link from "next/link";
 
-export function Part1() {
+interface Part1Props {
+  platform: NodeJS.Platform;
+}
+
+export function Part1({ platform }: Part1Props) {
   const animatedItem = {
     0: useScrollFadeIn(DirectionType.up, 1, 0.1),
     1: useScrollFadeIn(DirectionType.up, 1.3, 0.1),
@@ -22,10 +27,24 @@ export function Part1() {
             </p>
           </div>
           <div className="flex gap-x-4 justify-center" {...animatedItem[0]}>
-            <button className="mobile:w-fit laptop:w-[180px] justify-center p-4 mobile:px-5 laptop:px-4 w-fit rounded-[12px] flex bg-bg-inverseWeak text-content-inverse text-caption18Sb">
-              <Icon name="Apple" width={24} height={24} />
-              <span className="px-1">App Store</span>
-            </button>
+            {platform !== "android" && (
+              <Link
+                href="https://apps.apple.com/kr/app/biskit/id6467542471"
+                className="mobile:w-fit laptop:w-[180px] justify-center p-4 mobile:px-5 laptop:px-4 w-fit rounded-[12px] flex bg-bg-inverseWeak text-content-inverse text-caption18Sb"
+              >
+                <Icon name="Apple" width={24} height={24} />
+                <span className="px-1">App Store</span>
+              </Link>
+            )}
+            {platform !== "darwin" && (
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.teambiskit.biskit&pli=1"
+                className="mobile:w-fit laptop:w-[180px] justify-center p-4 mobile:px-5 laptop:px-4 w-fit rounded-[12px] flex bg-bg-inverseWeak text-content-inverse text-caption18Sb"
+              >
+                <Icon name="Google" width={24} height={24} />
+                <span className="px-1">Google Play</span>
+              </Link>
+            )}
           </div>
         </div>
         <div
