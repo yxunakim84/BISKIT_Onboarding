@@ -3,12 +3,12 @@ import Icon from "../Icon";
 import useScrollFadeIn, { DirectionType } from "@/hooks/useScrollFadeIn";
 import colors from "@/theme/colors";
 import Link from "next/link";
-
+import { DeviceType } from "@/types/device";
 interface Part1Props {
-  platform: NodeJS.Platform;
+  device: DeviceType;
 }
 
-export default function Part7({ platform }: Part1Props) {
+export default function Part7({ device }: Part1Props) {
   const animatedItem = {
     0: useScrollFadeIn(DirectionType.up, 1, 0.4, 0.7),
     1: useScrollFadeIn(DirectionType.up, 1.3, 0.8, 0.7),
@@ -40,7 +40,7 @@ export default function Part7({ platform }: Part1Props) {
           </div>
         </div>
         <div className="flex gap-x-4 justify-center" {...animatedItem[2]}>
-          {platform !== "android" && (
+          {device !== "Android" && (
             <Link
               href="https://apps.apple.com/kr/app/biskit/id6467542471"
               className="mobile:w-fit laptop:w-[180px] justify-center p-4 mobile:px-5 laptop:px-4 w-fit rounded-[12px] flex bg-bg-inverseWeak text-content-inverse text-caption18Sb"
@@ -49,7 +49,7 @@ export default function Part7({ platform }: Part1Props) {
               <span className="px-1">App Store</span>
             </Link>
           )}
-          {platform !== "darwin" && (
+          {device !== "iOS" && (
             <Link
               href="https://play.google.com/store/apps/details?id=com.teambiskit.biskit&pli=1"
               className="mobile:w-fit laptop:w-[180px] justify-center p-4 mobile:px-5 laptop:px-4 w-fit rounded-[12px] flex bg-bg-inverseWeak text-content-inverse text-caption18Sb"
