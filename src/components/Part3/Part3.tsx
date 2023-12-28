@@ -13,7 +13,7 @@ export default function Part3() {
   return (
     <section className="w-full mobile:pt-[60px] mobile:pb-[40px] mobile:px-5 laptop:py-[100px] laptop:px-[40px] flex-col items-center bg-bg-elevation1 flex">
       <div className="max-w-[1220px] w-full flex mobile:flex-col desktop:flex-row-reverse items-center mobile:gap-y-[40px] laptop:gap-y-[64px] desktop:justify-between">
-        <div className="flex flex-col laptop:gap-y-6 mobile:gap-y-3 pl-8 desktop:text-end mobile:text-center">
+        <div className="flex flex-col laptop:gap-y-6 mobile:gap-y-3 desktop:pl-8 desktop:text-end mobile:text-center">
           <div className="flex flex-col laptop:gap-y-3 mobile:gap-y-1 desktop:items-end laptop:text-title48Bd mobile:text-heading24Bd">
             <div
               className="text-content-placeholder desktop:max-w-[290px]"
