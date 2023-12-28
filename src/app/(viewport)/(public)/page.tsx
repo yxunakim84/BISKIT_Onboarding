@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const [device, setDevice] = useState<DeviceType>("Unknown");
+
   function detectDevice(userAgent: string): DeviceType {
     if (/Android/i.test(userAgent)) {
       return "Android";
@@ -37,10 +38,7 @@ export default function Home() {
       setDevice("Unknown");
     }
   }, []);
-
-  // typeof navigator !== "undefined" ? navigator.userAgent : "unknown";
-  // const device = detectDevice(userAgent);
-
+  
   return (
     <main className="w-screen">
       <Header />
