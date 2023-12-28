@@ -25,7 +25,9 @@ export default function Home() {
       return "Unknown";
     }
   }
-  const userAgent = navigator.userAgent;
+
+  const userAgent =
+    typeof navigator !== "undefined" ? navigator.userAgent : "unknown";
   const device = detectDevice(userAgent);
 
   return (
