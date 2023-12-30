@@ -83,10 +83,10 @@ export default function Part4() {
           </div>
         </div>
         <div
-          className="relative shrink-0 mobile:w-[335px] mobile:h-[335px] laptop:w-[504px] laptop:h-[504px] bg-bg-inverseWeak flex flex-col items-center rounded-[32px]"
+          className="relative shrink-0 aspect-square mobile:w-[335px] mobile:h-[335px] laptop:w-[504px] laptop:h-[504px] bg-bg-inverseWeak flex flex-col items-center justify-center rounded-[32px]"
           {...animatedItem[2]}
         >
-          <div className="relative mobile:w-[206px] mobile:h-[446px] laptop:w-[311px] laptop:h-[672px]">
+          <div className="mt-[30px] relative mobile:w-[206px] mobile:h-[446px] laptop:w-[311px] laptop:h-[672px]">
             <Image
               src="/assets/img/screen/meetup_list.png"
               alt=""
@@ -95,7 +95,7 @@ export default function Part4() {
             />
           </div>
           <div
-            className="absolute laptop:w-[377px] laptop:h-[224px] mobile:w-[250px] mobile:h-[150px] top-10 shadow-shadow-3"
+            className="absolute laptop:w-[377px] laptop:h-[224px] mobile:w-[250px] mobile:h-[150px] shadow-shadow-3"
             {...animatedItem[3]}
           >
             <Image
