@@ -132,7 +132,7 @@ export default function Part4({ windowWidth }: Part4Props) {
           </div>
           <div
             className="absolute laptop:w-[377px] laptop:h-[224px] mobile_m:w-[250px] mobile_m:h-[150px] mobile:aspect-square mobile:w-full mobile_m:shadow-shadow-3"
-            {...animatedItem[1]}
+            {...animatedItem[2]}
           >
             <Image
               src="/assets/img/screen/meetup.png"
