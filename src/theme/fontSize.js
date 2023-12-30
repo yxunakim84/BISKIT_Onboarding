@@ -48,6 +48,14 @@ const fontSize = {
       lineHeight: "140%",
     },
   ],
+
+  body24Sb: [
+    "24px",
+    {
+      fontWeight: "500",
+      lineHeight: "160%",
+    },
+  ],
   body16Sb: [
     "16px",
     {

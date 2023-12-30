@@ -27,7 +27,7 @@ export function Part1({ device, windowWidth }: Part1Props) {
               <br />
               외국인 친구들이랑 맛집 가요!
             </h4>
-            <p className="laptop:text-caption18Sb mobile:text-body16Rg text-content-weaker mobile:px-12">
+            <p className="laptop:text-body24Sb mobile:text-body16Rg text-content-weaker mobile:px-12">
               BISKIT에서 우리학교 다양한 국적의 친구들과 모여볼까요?
             </p>
           </div>
