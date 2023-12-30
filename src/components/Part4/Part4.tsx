@@ -43,14 +43,16 @@ const category_list: { ko_label: string; en_label: string; icon: IconName }[] =
     },
   ];
 
-export default function Part4() {
+interface Part4Props {
+  windowWidth: number;
+}
+export default function Part4({ windowWidth }: Part4Props) {
   const animatedItem = {
     0: useScrollFadeIn(DirectionType.up, 1.2, 0.1, 0.5),
     1: useScrollFadeIn(DirectionType.up, 1.6, 0.1, 0.5),
     2: useScrollFadeIn(DirectionType.up, 1.3, 0.1, 0.5),
     3: useScrollFadeIn(DirectionType.up, 1.6, 0.3, 0.5),
   };
-  const windowWidth = window.outerWidth;
 
   return (
     <section className="mobile:pt-[60px] mobile:pb-[40px] mobile:px-5 laptop:py-[100px] laptop:px-[40px] flex-col items-center bg-bg-elevation1 flex">
