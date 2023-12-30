@@ -14,7 +14,8 @@ const config: Config = {
   theme: {
     screens: {
       mobile: "0px",
-      laptop: "700px",
+      mobile_m: "375px",
+      laptop: "600px",
       desktop: "1441px",
     },
     colors,
