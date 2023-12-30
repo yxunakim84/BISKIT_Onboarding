@@ -82,20 +82,18 @@ export default function Part4() {
             ))}
           </div>
         </div>
-        <div
-          className="relative shrink-0 aspect-square mobile:w-[335px] mobile:h-[335px] laptop:w-[504px] laptop:h-[504px] bg-bg-inverseWeak flex flex-col items-center justify-center rounded-[32px]"
+        {/* <div
+          className="relative shrink-0 aspect-square mobile:w-full mobile:h-full mobile_m:w-[335px] mobile_m:h-[335px] laptop:w-[504px] laptop:h-[504px] bg-bg-inverseWeak flex flex-col items-center justify-center rounded-[32px]"
           {...animatedItem[2]}
         >
-          <div className="mt-[30px] relative mobile:w-[206px] mobile:h-[446px] laptop:w-[311px] laptop:h-[672px]">
-            <Image
-              src="/assets/img/screen/meetup_list.png"
-              alt=""
-              fill
-              unoptimized
-            />
-          </div>
+          <Image
+            src="/assets/img/screen/meetup_list_2.png"
+            alt=""
+            fill
+            unoptimized
+          />
           <div
-            className="absolute laptop:w-[377px] laptop:h-[224px] mobile:w-[250px] mobile:h-[150px] shadow-shadow-3"
+            className="absolute mobile:aspect-[3/2] mobile:w-full laptop:w-[377px] laptop:h-[224px] mobile_m:w-[250px] mobile_m:h-[150px] shadow-shadow-3"
             {...animatedItem[3]}
           >
             <Image
@@ -103,6 +101,34 @@ export default function Part4() {
               alt=""
               fill
               unoptimized
+              className="object-contain px-4"
+            />
+          </div>
+        </div> */}
+
+        <div
+          className="relative shrink-0 aspect-square mobile:w-full mobile:h-full mobile_m:w-[335px] mobile_m:h-[335px] laptop:w-[504px] laptop:h-[504px] bg-bg-inverseWeak flex flex-col items-center justify-center laptop:rounded-[32px] mobile:rounded-[20px]"
+          {...animatedItem[2]}
+        >
+          <div className="relative mobile:aspect-square mobile:w-full mobile_m:w-[206px] mobile_m:h-[446px] laptop:w-[311px] laptop:h-[672px]">
+            <Image
+              src="/assets/img/screen/meetup_list.png"
+              alt=""
+              fill
+              unoptimized
+              className="object-contain mobile:pt-5 mobile_m:pt-8"
+            />
+          </div>
+          <div
+            className="absolute laptop:w-[377px] laptop:h-[224px] mobile_m:w-[250px] mobile_m:h-[150px] mobile:aspect-square mobile:w-full mobile_m:shadow-shadow-3"
+            {...animatedItem[3]}
+          >
+            <Image
+              src="/assets/img/screen/meetup.png"
+              alt=""
+              fill
+              unoptimized
+              className="mobile:object-contain mobile:px-4 mobile_m:px-0"
             />
           </div>
         </div>

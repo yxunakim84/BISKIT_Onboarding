@@ -32,15 +32,16 @@ export default function Part5() {
           </div>
         </div>
         <div
-          className="relative mobile:w-[335px] mobile:h-[335px] laptop:w-[504px] laptop:h-[504px] bg-bg-inverseWeak flex flex-col items-center rounded-[32px]"
+          className="relative mobile:aspect-square mobile:w-full mobile:h-full mobile_m:w-[335px] mobile_m:h-[335px] laptop:w-[504px] laptop:h-[504px] flex flex-col items-center"
           {...animatedItem[2]}
         >
-          <div className="relative mobile:w-[335px] mobile:h-[335px] laptop:w-[504px] laptop:h-[504px]">
+          <div className="relative mobile:aspect-square mobile:w-full mobile:h-full mobile_m:w-[335px] mobile_m:h-[335px] laptop:w-[504px] laptop:h-[504px]">
             <Image
-              src="/assets/img/screen/meetup_card2.png"
+              src="/assets/img/screen/meetup_card_2.png"
               alt=""
               fill
               unoptimized
+              className="object-contain laptop:rounded-[32px] mobile:rounded-[20px]"
             />
           </div>
         </div>
