@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Icon from "../Icon";
 import useScrollFadeIn, { DirectionType } from "@/hooks/useScrollFadeIn";
@@ -6,15 +8,14 @@ import { DeviceType } from "@/types/device";
 
 interface Part1Props {
   device: DeviceType;
+  windowWidth: number;
 }
 
-export function Part1({ device }: Part1Props) {
+export function Part1({ device, windowWidth }: Part1Props) {
   const animatedItem = {
     0: useScrollFadeIn(DirectionType.up, 1, 0.1),
     1: useScrollFadeIn(DirectionType.up, 1.3, 0.1),
   };
-
-  const windowWidth = window.outerWidth;
 
   return (
     <section className="h-full w-full flex flex-col items-center bg-bg-elevation2">

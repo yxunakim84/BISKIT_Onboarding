@@ -14,8 +14,14 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const [device, setDevice] = useState<DeviceType>("Unknown");
+  const [windowWidth, setWindowWidth] = useState(0);
 
-  function detectDevice(userAgent: string): DeviceType {
+  const updateWindowDimensions = () => {
+    const newWidth = window.outerWidth;
+    setWindowWidth(newWidth);
+  };
+
+  const detectDevice = (userAgent: string): DeviceType => {
     if (/Android/i.test(userAgent)) {
       return "Android";
     } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
@@ -27,7 +33,7 @@ export default function Home() {
     } else {
       return "Unknown";
     }
-  }
+  };
 
   useEffect(() => {
     if (navigator && typeof navigator !== "undefined") {
@@ -39,13 +45,20 @@ export default function Home() {
     }
   }, []);
 
+  useEffect(() => {
+    window.addEventListener("resize", updateWindowDimensions);
+    updateWindowDimensions();
+
+    return () => window.removeEventListener("resize", updateWindowDimensions);
+  }, []);
+
   return (
     <main className="w-screen">
       <Header />
-      <Part1 device={device} />
+      {windowWidth !== 0 && <Part1 device={device} windowWidth={windowWidth} />}
       <Part2 />
       <Part3 />
-      <Part4 />
+      {windowWidth !== 0 && <Part4 windowWidth={windowWidth} />}
       <Part5 />
       <Part6 />
       <Part7 device={device} />
