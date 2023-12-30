@@ -55,7 +55,7 @@ export function Part1({ device }: Part1Props) {
           className="mobile:w-[257px] mobile:h-[270px] bg-cover bg-no-repeat laptop:w-[808px] laptop:h-[776px] relative"
           {...animatedItem[1]}
           style={
-            windowWidth < 700
+            windowWidth < 600
               ? {
                   backgroundImage: `url(/assets/img/screen/home_screen2.png)`,
                 }

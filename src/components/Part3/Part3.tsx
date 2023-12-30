@@ -34,7 +34,7 @@ export default function Part3() {
           </p>
         </div>
         <div
-          className="relative mobile:w-[335px] mobile:h-[252px] laptop:w-[576px] laptop:h-[435px]"
+          className="relative mobile:aspect-[3/2] mobile:w-full mobile_m:w-[335px] mobile_m:h-[252px] laptop:w-[576px] laptop:h-[435px]"
           {...animatedItem[0]}
         >
           <Image
@@ -42,6 +42,7 @@ export default function Part3() {
             alt=""
             fill
             unoptimized
+            className="object-contain"
           />
         </div>
         {/* <div className="relative min-[400px]:w-full">
