@@ -61,13 +61,13 @@ export default function Part6() {
       style: { opacity: number; transform: string | undefined };
     }
   > = {
-    "0": useScrollFadeIn(DirectionType.up, 1, 1, 0.6),
-    "1": useScrollFadeIn(DirectionType.up, 1, 1.3, 0.6),
-    "2": useScrollFadeIn(DirectionType.up, 1, 1.6, 0.6),
-    "3": useScrollFadeIn(DirectionType.up, 1, 1.9, 0.6),
-    "4": useScrollFadeIn(DirectionType.up, 1, 2.1, 0.6),
-    "5": useScrollFadeIn(DirectionType.up, 1, 2.4, 0.6),
-    "6": useScrollFadeIn(DirectionType.up, 1, 1, 0.5),
+    "0": useScrollFadeIn(DirectionType.up, 1, 0.1),
+    "1": useScrollFadeIn(DirectionType.up, 1, 0.2),
+    "2": useScrollFadeIn(DirectionType.up, 1, 0.3),
+    "3": useScrollFadeIn(DirectionType.up, 1, 0.4),
+    "4": useScrollFadeIn(DirectionType.up, 1, 0.5),
+    "5": useScrollFadeIn(DirectionType.up, 1, 0.6),
+    "6": useScrollFadeIn(DirectionType.up, 1, 0.4),
   };
   return (
     <section className="mobile:pt-[60px] mobile:pb-[40px] mobile:px-5 laptop:py-[100px] laptop:px-[40px] flex-col items-center bg-bg-elevation1 flex">

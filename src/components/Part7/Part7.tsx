@@ -10,9 +10,9 @@ interface Part1Props {
 
 export default function Part7({ device }: Part1Props) {
   const animatedItem = {
-    0: useScrollFadeIn(DirectionType.up, 1, 0.4, 0.7),
-    1: useScrollFadeIn(DirectionType.up, 1.3, 0.8, 0.7),
-    2: useScrollFadeIn(DirectionType.up, 1.3, 1, 0.7),
+    0: useScrollFadeIn(DirectionType.up, 1, 0.4),
+    1: useScrollFadeIn(DirectionType.up, 1, 0.4),
+    2: useScrollFadeIn(DirectionType.up, 1.2, 0.6),
   };
   return (
     <section className="mobile:pt-[60px] mobile:pb-[40px] mobile:px-5 laptop:pt-[100px] laptop:pb-[120px] laptop:px-[40px] flex-col items-center bg-bg-elevation2 flex">
