@@ -14,7 +14,7 @@ export function Part1({ device }: Part1Props) {
     1: useScrollFadeIn(DirectionType.up, 1.3, 0.1),
   };
 
-  const windowWidth = window.innerWidth;
+  const windowWidth = window.outerWidth;
 
   return (
     <section className="h-full w-full flex flex-col items-center bg-bg-elevation2">

@@ -50,6 +50,7 @@ export default function Part4() {
     2: useScrollFadeIn(DirectionType.up, 1.3, 0.1, 0.5),
     3: useScrollFadeIn(DirectionType.up, 1.6, 0.3, 0.5),
   };
+  const windowWidth = window.outerWidth;
 
   return (
     <section className="mobile:pt-[60px] mobile:pb-[40px] mobile:px-5 laptop:py-[100px] laptop:px-[40px] flex-col items-center bg-bg-elevation1 flex">
@@ -69,42 +70,53 @@ export default function Part4() {
             </div>
           </div>
 
-          <div
-            className="flex overflow-x-scroll no-scrollbar mobile:justify-center desktop:justify-start mobile:gap-x-6 laptop:gap-x-0 mobile:w-full"
-            {...animatedItem[0]}
-          >
-            {category_list.map((category) => (
-              <CategoryItem
-                key={category.ko_label}
-                icon={category.icon}
-                label={category.ko_label}
-              />
-            ))}
-          </div>
+          {windowWidth < 600 ? (
+            <div
+              x-data="{}"
+              x-init="$nextTick(() => {
+                let ul = $refs.logos;
+                ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                ul.nextSibling.setAttribute('aria-hidden', 'true');
+            })"
+              className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] animate-fadeIn"
+            >
+              <ul className="animate-infiniteScroll flex items-center justify-center md:justify-start">
+                {category_list.map((category) => (
+                  <CategoryItem
+                    key={category.ko_label}
+                    icon={category.icon}
+                    label={category.ko_label}
+                  />
+                ))}
+              </ul>
+              <ul
+                className="flex items-center justify-center md:justify-start animate-infiniteScroll"
+                aria-hidden="true"
+              >
+                {category_list.map((category) => (
+                  <CategoryItem
+                    key={category.ko_label}
+                    icon={category.icon}
+                    label={category.ko_label}
+                  />
+                ))}
+              </ul>
+            </div>
+          ) : (
+            <div
+              className="flex overflow-x-scroll no-scrollbar mobile:justify-center desktop:justify-start mobile:gap-x-6 laptop:gap-x-0 mobile:w-full"
+              {...animatedItem[0]}
+            >
+              {category_list.map((category) => (
+                <CategoryItem
+                  key={category.ko_label}
+                  icon={category.icon}
+                  label={category.ko_label}
+                />
+              ))}
+            </div>
+          )}
         </div>
-        {/* <div
-          className="relative shrink-0 aspect-square mobile:w-full mobile:h-full mobile_m:w-[335px] mobile_m:h-[335px] laptop:w-[504px] laptop:h-[504px] bg-bg-inverseWeak flex flex-col items-center justify-center rounded-[32px]"
-          {...animatedItem[2]}
-        >
-          <Image
-            src="/assets/img/screen/meetup_list_2.png"
-            alt=""
-            fill
-            unoptimized
-          />
-          <div
-            className="absolute mobile:aspect-[3/2] mobile:w-full laptop:w-[377px] laptop:h-[224px] mobile_m:w-[250px] mobile_m:h-[150px] shadow-shadow-3"
-            {...animatedItem[3]}
-          >
-            <Image
-              src="/assets/img/screen/meetup.png"
-              alt=""
-              fill
-              unoptimized
-              className="object-contain px-4"
-            />
-          </div>
-        </div> */}
 
         <div
           className="relative shrink-0 aspect-square mobile:w-full mobile:h-full mobile_m:w-[335px] mobile_m:h-[335px] laptop:w-[504px] laptop:h-[504px] bg-bg-inverseWeak flex flex-col items-center justify-center laptop:rounded-[32px] mobile:rounded-[20px]"
