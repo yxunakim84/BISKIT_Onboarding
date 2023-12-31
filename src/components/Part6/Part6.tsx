@@ -1,8 +1,8 @@
 import React, { MutableRefObject, lazy } from "react";
-import Icon from "../Icon";
 import useScrollFadeIn, { DirectionType } from "@/hooks/useScrollFadeIn";
-import colors from "@/theme/colors";
 import ReviewCard from "../ReviewCard";
+import useLocale from "@/hooks/useLocale";
+import { PageData } from "@/contexts/locale.context/locale.context";
 
 const reviews: {
   ko_description: string;
@@ -54,6 +54,11 @@ const reviews: {
 ];
 
 export default function Part6() {
+  const { dict, locale } = useLocale() as {
+    dict: PageData;
+    locale: "ko" | "en";
+  };
+
   const animatedItem: Record<
     string,
     {
@@ -76,12 +81,14 @@ export default function Part6() {
           className="laptop:text-title48Bd mobile:text-heading24Bd mobile:text-center desktop:text-start text-content-default"
           {...animatedItem[6]}
         >
-          BISKIT을 먼저 만나본 사람들
+          {dict.page6.title}
         </div>
         <ul className="grid mobile:grid-cols-1 mobile:gap-y-4 laptop:grid-cols-3 laptop:gap-6">
           {reviews.map((review, index) => (
             <ReviewCard
-              description={review.ko_description}
+              description={
+                locale === "ko" ? review.ko_description : review.en_description
+              }
               label={review.label}
               key={review.label}
               animation={animatedItem[index]}

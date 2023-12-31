@@ -3,6 +3,8 @@ import Image from "next/image";
 import React from "react";
 import { IconName } from "../Icon/Icon";
 import CategoryItem from "../CategoryItem";
+import useLocale from "@/hooks/useLocale";
+import { PageData } from "@/contexts/locale.context/locale.context";
 
 const category_list: { ko_label: string; en_label: string; icon: IconName }[] =
   [
@@ -47,6 +49,11 @@ interface Part4Props {
   windowWidth: number;
 }
 export default function Part4({ windowWidth }: Part4Props) {
+  const { dict, locale } = useLocale() as {
+    dict: PageData;
+    locale: "ko" | "en";
+  };
+
   const animatedItem = {
     0: useScrollFadeIn(DirectionType.up, 1.2, 0.1, 0.5),
     1: useScrollFadeIn(DirectionType.up, 1.3, 0.1),
@@ -58,13 +65,11 @@ export default function Part4({ windowWidth }: Part4Props) {
       <div className="laptop:max-w-[1220px] mobile:gap-y-12 w-full flex mobile:flex-col desktop:flex-row items-center desktop:justify-between">
         <div className="desktop:pr-8 flex w-full flex-col laptop:gap-y-12 mobile:gap-y-8">
           <div className="flex flex-col mobile:items-center mobile:text-center desktop:text-start desktop:items-start mobile:gap-y-3 laptop:gap-y-6 animate-fadeIn">
-            <div className="text-content-default laptop:text-title48Bd mobile:text-heading24Bd">
-              내 취향에
-              <br />딱 맞는 모임
+            <div className="whitespace-pre-wrap text-content-default laptop:text-title48Bd mobile:text-heading24Bd">
+              {dict.page4.title}
             </div>
-            <div className="laptop:text-heading24Md mobile:text-body16Rg text-content-weaker">
-              밥약부터 취미까지
-              <br />내 취향에 맞는 모임을 찾아보세요
+            <div className="whitespace-pre-wrap laptop:text-heading24Md mobile:text-body16Rg text-content-weaker">
+              {dict.page4.subTitle}
             </div>
           </div>
 
@@ -84,7 +89,9 @@ export default function Part4({ windowWidth }: Part4Props) {
                   <CategoryItem
                     key={category.ko_label}
                     icon={category.icon}
-                    label={category.ko_label}
+                    label={
+                      locale === "ko" ? category.ko_label : category.en_label
+                    }
                   />
                 ))}
               </ul>
@@ -96,7 +103,9 @@ export default function Part4({ windowWidth }: Part4Props) {
                   <CategoryItem
                     key={category.ko_label}
                     icon={category.icon}
-                    label={category.ko_label}
+                    label={
+                      locale === "ko" ? category.ko_label : category.en_label
+                    }
                   />
                 ))}
               </ul>
@@ -110,7 +119,9 @@ export default function Part4({ windowWidth }: Part4Props) {
                 <CategoryItem
                   key={category.ko_label}
                   icon={category.icon}
-                  label={category.ko_label}
+                  label={
+                    locale === "ko" ? category.ko_label : category.en_label
+                  }
                 />
               ))}
             </div>
