@@ -1,12 +1,5 @@
 import PageDetail from "@/components/PageDetail";
-import useLocale from "@/hooks/useLocale";
-import { enDictionary, getDictionary, koDictionary } from "@/lib/dictionary";
-
-// export const getStaticProps: GetStaticProps = async ({
-//   locale = "en" || "ko",
-// }) => {
-//   return { props: { ...(await serverSideTranslations(locale, ["complete"])) } };
-// };
+import { getDictionary } from "@/lib/dictionary";
 
 export default async function Home({
   params: { lang },
