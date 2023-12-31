@@ -1,6 +1,6 @@
 import { pretendard } from "@/theme/font";
 import type { Metadata } from "next";
-import "./globals.css";
+import "../../app/globals.css";
 
 export const metadata: Metadata = {
   title: "biskit",
@@ -15,11 +15,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: { lang: string };
 }) {
   return (
-    <html lang="ko" className={pretendard.className}>
+    <html lang={params.lang} className={pretendard.className}>
       <body id="body" className="h-screen antialiased">
         {children}
       </body>
