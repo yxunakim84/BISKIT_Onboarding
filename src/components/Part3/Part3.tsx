@@ -1,8 +1,12 @@
+import { PageData } from "@/contexts/locale.context/locale.context";
+import useLocale from "@/hooks/useLocale";
 import useScrollFadeIn, { DirectionType } from "@/hooks/useScrollFadeIn";
 import Image from "next/image";
 import React from "react";
 
 export default function Part3() {
+  const { dict } = useLocale() as { dict: PageData };
+
   const animatedItem = {
     0: useScrollFadeIn(DirectionType.right, 1.2, 0.1, 0.5),
     1: useScrollFadeIn(DirectionType.right, 1.5, 0.4, 0.5),
@@ -19,18 +23,14 @@ export default function Part3() {
               className="text-content-placeholder desktop:max-w-[290px]"
               {...animatedItem[2]}
             >
-              영어 못하는데 괜찮을까..?
+              {dict.page3.title}
             </div>
             <div className="text-content-default" {...animatedItem[3]}>
-              걱정마세요!
+              {dict.page3.subTitle}
             </div>
           </div>
-          <p className="laptop:text-heading24Md mobile:text-body16Rg text-content-weaker animate-fadeIn">
-            서툴게 말해도 찰떡같이 알아듣는
-            <br />
-            외국인 친구들과 부담없이 대화하고
-            <br />
-            언어 실력도 늘려보세요
+          <p className="whitespace-pre-wrap laptop:text-heading24Md mobile:text-body16Rg text-content-weaker animate-fadeIn">
+            {dict.page3.description}
           </p>
         </div>
         <div

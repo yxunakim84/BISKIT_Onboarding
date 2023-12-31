@@ -3,8 +3,12 @@ import React from "react";
 import Icon from "../Icon";
 import colors from "@/theme/colors";
 import useScrollFadeIn, { DirectionType } from "@/hooks/useScrollFadeIn";
+import useLocale from "@/hooks/useLocale";
+import { PageData } from "@/contexts/locale.context/locale.context";
 
 export default function Part2() {
+  const { dict } = useLocale() as { dict: PageData };
+
   const animatedItem = {
     0: useScrollFadeIn(DirectionType.up, 1.2, 0.1),
     1: useScrollFadeIn(DirectionType.up, 1.5, 0.4),
@@ -17,18 +21,16 @@ export default function Part2() {
       <div className="laptop:max-w-[1220px] mobile:w-full flex desktop:flex-row mobile:flex-col items-center desktop:justify-between mobile:gap-y-[40px] laptop:gap-y-[64px]">
         <div className="flex desktop:text-start flex-col laptop:gap-y-6 mobile:gap-y-3">
           <h4
-            className="laptop:text-title48Bd mobile:text-center desktop:text-start mobile:text-heading24Bd text-content-default"
+            className="whitespace-pre-wrap laptop:text-title48Bd mobile:text-center desktop:text-start mobile:text-heading24Bd text-content-default"
             {...animatedItem[0]}
           >
-            학교 인증으로
-            <br /> 더 안전하게
+            {dict.page2.title}
           </h4>
           <p
-            className="laptop:text-caption18Sb mobile:text-center desktop:text-start mobile:text-body16Rg text-content-weaker"
+            className="whitespace-pre-wrap laptop:text-caption18Sb mobile:text-center desktop:text-start mobile:text-body16Rg text-content-weaker"
             {...animatedItem[1]}
           >
-            신원을 알 수 없는 온라인 만남은 그만, <br />
-            학교 인증된 진짜 우리학교 친구들과 함께해요
+            {dict.page2.subTitle}
           </p>
         </div>
         <div className="laptop:w-[504px] laptop:h-[504px] mobile:aspect-square mobile:w-full mobile_m:w-[335px] mobile_m:h-[335px] w-full bg-bg-elevation3 flex justify-center items-end laptop:rounded-[32px] mobile:rounded-[20px]">
@@ -53,7 +55,7 @@ export default function Part2() {
                 className="mobile:w-4 mobile:h-4 laptop:w-6 laptop:h-6"
               />
               <span className="laptop:text-heading20Bd mobile:text-body14Sb text-[#FEFEFE]">
-                학교 인증 완료
+                {dict.page2.description}
               </span>
             </div>
           </div>

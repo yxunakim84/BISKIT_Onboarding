@@ -4,11 +4,15 @@ import useScrollFadeIn, { DirectionType } from "@/hooks/useScrollFadeIn";
 import colors from "@/theme/colors";
 import Link from "next/link";
 import { DeviceType } from "@/types/device";
+import useLocale from "@/hooks/useLocale";
+import { PageData } from "@/contexts/locale.context/locale.context";
 interface Part1Props {
   device: DeviceType;
 }
 
 export default function Part7({ device }: Part1Props) {
+  const { dict } = useLocale() as { dict: PageData };
+
   const animatedItem = {
     0: useScrollFadeIn(DirectionType.up, 1, 0.4),
     1: useScrollFadeIn(DirectionType.up, 1, 0.4),
@@ -30,12 +34,10 @@ export default function Part7({ device }: Part1Props) {
               />
             </div>
             <div
-              className="mobile:text-heading24Bd laptop:text-title48Bd text-content-default text-center"
+              className="whitespace-pre-wrap mobile:text-heading24Bd laptop:text-title48Bd text-content-default text-center"
               {...animatedItem[1]}
             >
-              글로벌한 대학생활,
-              <br />
-              BISKIT에서 시작해 보세요
+              {dict.page7.title}
             </div>
           </div>
         </div>
