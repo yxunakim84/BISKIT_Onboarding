@@ -1,6 +1,7 @@
 import { pretendard } from "@/theme/font";
 import type { Metadata } from "next";
 import "../../app/globals.css";
+import { Locale } from "../../../i18n.config";
 
 export const metadata: Metadata = {
   title: "biskit",
@@ -18,7 +19,7 @@ export default function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { lang: string };
+  params: { lang: Locale };
 }) {
   return (
     <html lang={params.lang} className={pretendard.className}>
