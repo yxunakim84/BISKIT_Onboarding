@@ -1,12 +1,16 @@
 import type { Config } from "tailwindcss";
-const colors = require("./src/theme/colors");
-const fontSize = require("./src/theme/fontSize");
-const boxShadow = require("./src/theme/boxShadow");
-const keyframes = require("./src/theme/keyframes");
-const animation = require("./src/theme/animation");
+// const colors = require("./src/theme/colors");
+const colors = require("./theme/colors");
+const fontSize = require("./theme/fontSize");
+const boxShadow = require("./theme/boxShadow");
+const keyframes = require("./theme/keyframes");
+const animation = require("./theme/animation");
 
 const config: Config = {
   content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
