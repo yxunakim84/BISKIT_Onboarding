@@ -7,6 +7,7 @@ import Link from "next/link";
 import { DeviceType } from "@/types/device";
 import useLocale from "@/hooks/useLocale";
 import { PageData } from "@/contexts/locale.context/locale.context";
+import { Locale } from "@/types/locale";
 
 interface Part1Props {
   device: DeviceType;
@@ -14,7 +15,7 @@ interface Part1Props {
 }
 
 export function Part1({ device, windowWidth }: Part1Props) {
-  const { dict } = useLocale() as { dict: PageData };
+  const { locale, dict } = useLocale() as { locale: Locale; dict: PageData };
 
   const animatedItem = {
     0: useScrollFadeIn(DirectionType.up, 1, 0.1),
@@ -60,10 +61,10 @@ export function Part1({ device, windowWidth }: Part1Props) {
           style={
             windowWidth < 600
               ? {
-                  backgroundImage: `url(/assets/image/screen/home_screen2.png)`,
+                  backgroundImage: `url(/assets/image/screen/home_screen_mobile_${locale}.png)`,
                 }
               : {
-                  backgroundImage: `url(/assets/image/screen/home_screen_laptop.png)`,
+                  backgroundImage: `url(/assets/image/screen/home_screen_laptop_${locale}.png)`,
                 }
           }
         ></div>
