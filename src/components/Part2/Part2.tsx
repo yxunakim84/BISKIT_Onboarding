@@ -5,9 +5,10 @@ import colors from "@/theme/colors";
 import useScrollFadeIn, { DirectionType } from "@/hooks/useScrollFadeIn";
 import useLocale from "@/hooks/useLocale";
 import { PageData } from "@/contexts/locale.context/locale.context";
+import { Locale } from "@/types/locale";
 
 export default function Part2() {
-  const { dict } = useLocale() as { dict: PageData };
+  const { locale, dict } = useLocale() as { locale: Locale; dict: PageData };
 
   const animatedItem = {
     0: useScrollFadeIn(DirectionType.up, 1.2, 0.1),
@@ -30,7 +31,7 @@ export default function Part2() {
             className="whitespace-pre-wrap laptop:text-caption18Sb mobile:text-center desktop:text-start mobile:text-body16Rg text-content-weaker"
             {...animatedItem[1]}
           >
-            {dict.page2.subTitle}
+            {dict.page2.subTitle}\
           </p>
         </div>
         <div className="laptop:w-[504px] laptop:h-[504px] mobile:aspect-square mobile:w-full mobile_m:w-[335px] mobile_m:h-[335px] w-full bg-bg-elevation3 flex justify-center items-end laptop:rounded-[32px] mobile:rounded-[20px]">
@@ -39,7 +40,7 @@ export default function Part2() {
             {...animatedItem[2]}
           >
             <Image
-              src="/assets/image/screen/verify_screen.png"
+              src={`/assets/image/screen/verification_card_${locale}.png`}
               alt="verification"
               fill
               unoptimized

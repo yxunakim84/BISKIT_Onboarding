@@ -1,11 +1,12 @@
 import { PageData } from "@/contexts/locale.context/locale.context";
 import useLocale from "@/hooks/useLocale";
 import useScrollFadeIn, { DirectionType } from "@/hooks/useScrollFadeIn";
+import { Locale } from "@/types/locale";
 import Image from "next/image";
 import React from "react";
 
 export default function Part5() {
-  const { dict } = useLocale() as { dict: PageData };
+  const { locale, dict } = useLocale() as { locale: Locale; dict: PageData };
 
   const animatedItem = {
     0: useScrollFadeIn(DirectionType.up, 1.2, 0.1, 0.5),
@@ -35,7 +36,7 @@ export default function Part5() {
         >
           <div className="relative mobile:aspect-square mobile:w-full mobile:h-full mobile_m:w-[335px] mobile_m:h-[335px] laptop:w-[504px] laptop:h-[504px]">
             <Image
-              src="/assets/image/screen/meetup_card_2.png"
+              src={`/assets/image/screen/meetup_card_w_location_${locale}.png`}
               alt=""
               fill
               unoptimized

@@ -5,6 +5,7 @@ import { IconName } from "../Icon/Icon";
 import CategoryItem from "../CategoryItem";
 import useLocale from "@/hooks/useLocale";
 import { PageData } from "@/contexts/locale.context/locale.context";
+import { Locale } from "@/types/locale";
 
 const category_list: { ko_label: string; en_label: string; icon: IconName }[] =
   [
@@ -49,9 +50,9 @@ interface Part4Props {
   windowWidth: number;
 }
 export default function Part4({ windowWidth }: Part4Props) {
-  const { dict, locale } = useLocale() as {
+  const { locale, dict } = useLocale() as {
+    locale: Locale;
     dict: PageData;
-    locale: "ko" | "en";
   };
 
   const animatedItem = {
@@ -134,7 +135,7 @@ export default function Part4({ windowWidth }: Part4Props) {
         >
           <div className="relative mobile:aspect-square mobile:w-full mobile_m:w-[206px] mobile_m:h-[446px] laptop:w-[311px] laptop:h-[672px]">
             <Image
-              src="/assets/image/screen/meetup_list.png"
+              src={`/assets/image/screen/meetup_list_${locale}.png`}
               alt=""
               fill
               unoptimized
@@ -146,7 +147,7 @@ export default function Part4({ windowWidth }: Part4Props) {
             {...animatedItem[2]}
           >
             <Image
-              src="/assets/image/screen/meetup.png"
+              src={`/assets/image/screen/meetup_card_${locale}.png`}
               alt=""
               fill
               unoptimized
