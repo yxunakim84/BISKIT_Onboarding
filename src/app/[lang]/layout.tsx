@@ -1,7 +1,7 @@
 import { pretendard } from "@/theme/font";
 import type { Metadata } from "next";
 import "../../app/globals.css";
-import { Locale } from "../../../i18n.config";
+import { Locale } from "@/types/locale";
 
 export const metadata: Metadata = {
   title: "biskit",
