@@ -17,7 +17,7 @@ export default function Header() {
     let lastScroll = window.scrollY || 0;
     const scrollHandler = () => {
       let scrollTop = window.scrollY;
-      if (scrollTop > lastScroll) {
+      if (scrollTop !== 0 && scrollTop > lastScroll) {
         setIsVisible(false);
       } else {
         setIsVisible(true);
