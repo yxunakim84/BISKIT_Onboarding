@@ -134,7 +134,7 @@ export default function Part4({ windowWidth }: Part4Props) {
         >
           <div className="relative mobile:aspect-square mobile:w-full mobile_m:w-[206px] mobile_m:h-[446px] laptop:w-[311px] laptop:h-[672px]">
             <Image
-              src="/assets/img/screen/meetup_list.png"
+              src="/assets/image/screen/meetup_list.png"
               alt=""
               fill
               unoptimized
@@ -146,7 +146,7 @@ export default function Part4({ windowWidth }: Part4Props) {
             {...animatedItem[2]}
           >
             <Image
-              src="/assets/img/screen/meetup.png"
+              src="/assets/image/screen/meetup.png"
               alt=""
               fill
               unoptimized

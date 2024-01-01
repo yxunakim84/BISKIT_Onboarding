@@ -38,7 +38,7 @@ export default function Part3() {
           {...animatedItem[0]}
         >
           <Image
-            src="/assets/img/screen/lang_card.png"
+            src="/assets/image/screen/lang_card.png"
             alt=""
             fill
             unoptimized
@@ -51,7 +51,7 @@ export default function Part3() {
             {...animatedItem[0]}
           >
             <Image
-              src="/assets/img/screen/level_graph.png"
+              src="/assets/image/screen/level_graph.png"
               alt=""
               fill
               unoptimized
@@ -63,7 +63,7 @@ export default function Part3() {
                 {...animatedItem[1]}
               >
                 <Image
-                  src="/assets/img/screen/level.png"
+                  src="/assets/image/screen/level.png"
                   alt=""
                   fill
                   unoptimized
@@ -78,7 +78,7 @@ export default function Part3() {
               {...animatedItem[1]}
             >
               <Image
-                src="/assets/img/screen/level.png"
+                src="/assets/image/screen/level.png"
                 alt=""
                 fill
                 unoptimized

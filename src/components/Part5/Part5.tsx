@@ -35,7 +35,7 @@ export default function Part5() {
         >
           <div className="relative mobile:aspect-square mobile:w-full mobile:h-full mobile_m:w-[335px] mobile_m:h-[335px] laptop:w-[504px] laptop:h-[504px]">
             <Image
-              src="/assets/img/screen/meetup_card_2.png"
+              src="/assets/image/screen/meetup_card_2.png"
               alt=""
               fill
               unoptimized

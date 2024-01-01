@@ -39,7 +39,7 @@ export default function Part2() {
             {...animatedItem[2]}
           >
             <Image
-              src="/assets/img/screen/verify_screen.png"
+              src="/assets/image/screen/verify_screen.png"
               alt="verification"
               fill
               unoptimized

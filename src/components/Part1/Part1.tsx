@@ -60,10 +60,10 @@ export function Part1({ device, windowWidth }: Part1Props) {
           style={
             windowWidth < 600
               ? {
-                  backgroundImage: `url(/assets/img/screen/home_screen2.png)`,
+                  backgroundImage: `url(/assets/image/screen/home_screen2.png)`,
                 }
               : {
-                  backgroundImage: `url(/assets/img/screen/home_screen_laptop.png)`,
+                  backgroundImage: `url(/assets/image/screen/home_screen_laptop.png)`,
                 }
           }
         ></div>

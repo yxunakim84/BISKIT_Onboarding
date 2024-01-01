@@ -72,9 +72,9 @@ export default function PageDetail({
 
   return (
     <main className="w-screen">
-      <Header />
       {windowWidth !== 0 && (
         <>
+          <Header />
           <Part1 device={device} windowWidth={windowWidth} />
           <Part2 />
           <Part3 />
