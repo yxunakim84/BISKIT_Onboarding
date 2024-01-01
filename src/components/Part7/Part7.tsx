@@ -45,7 +45,7 @@ export default function Part7({ device }: Part1Props) {
           {device !== "Android" && (
             <Link
               href="https://apps.apple.com/kr/app/biskit/id6467542471"
-              className="mobile:w-fit laptop:w-[180px] justify-center p-4 mobile:px-5 laptop:px-4 w-fit rounded-[12px] flex bg-bg-inverseWeak text-content-inverse text-caption18Sb"
+              className="mobile:w-fit hover:bg-bg-inverse active:bg-bg-inverse transition-colors duration-300 laptop:w-[180px] justify-center p-4 mobile:px-5 laptop:px-4 w-fit rounded-[12px] flex bg-bg-inverseWeak text-content-inverse text-caption18Sb"
             >
               <Icon name="Apple" width={24} height={24} />
               <span className="px-1">App Store</span>
@@ -54,7 +54,7 @@ export default function Part7({ device }: Part1Props) {
           {device !== "iOS" && (
             <Link
               href="https://play.google.com/store/apps/details?id=com.teambiskit.biskit&pli=1"
-              className="mobile:w-fit laptop:w-[180px] justify-center p-4 mobile:px-5 laptop:px-4 w-fit rounded-[12px] flex bg-bg-inverseWeak text-content-inverse text-caption18Sb"
+              className="mobile:w-fit hover:bg-bg-inverse active:bg-bg-inverse transition-colors duration-300 laptop:w-[180px] justify-center p-4 mobile:px-5 laptop:px-4 w-fit rounded-[12px] flex bg-bg-inverseWeak text-content-inverse text-caption18Sb"
             >
               <Icon name="Google" width={24} height={24} />
               <span className="px-1">Google Play</span>
