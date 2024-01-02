@@ -31,7 +31,7 @@ export default function Part2() {
             className="whitespace-pre-wrap laptop:text-caption18Sb mobile:text-center desktop:text-start mobile:text-body16Rg text-content-weaker"
             {...animatedItem[1]}
           >
-            {dict.page2.subTitle}\
+            {dict.page2.subTitle}
           </p>
         </div>
         <div className="laptop:w-[504px] laptop:h-[504px] mobile:aspect-square mobile:w-full mobile_m:w-[335px] mobile_m:h-[335px] w-full bg-bg-elevation3 flex justify-center items-end laptop:rounded-[32px] mobile:rounded-[20px]">
