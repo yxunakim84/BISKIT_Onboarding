@@ -1,3 +1,4 @@
+import FloatingButton from "@/components/FloatingButton";
 import Header from "@/components/Header";
 
 export default function ViewportLayout({
@@ -14,6 +15,7 @@ export default function ViewportLayout({
       >
         {children}
       </div>
+      <FloatingButton />
     </div>
   );
 }
