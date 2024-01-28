@@ -1,6 +1,11 @@
 "use client";
 
-import Header from "../Header/Header";
+import { PageData } from "@/contexts/locale.context/locale.context";
+import useLocale from "@/hooks/useLocale";
+import { DeviceType } from "@/types/device";
+import { useEffect, useState } from "react";
+import FAQ from "../FAQ";
+import Footer from "../Footer";
 import Part1 from "../Part1";
 import Part2 from "../Part2";
 import Part3 from "../Part3";
@@ -8,22 +13,13 @@ import Part4 from "../Part4";
 import Part5 from "../Part5";
 import Part6 from "../Part6";
 import Part7 from "../Part7";
-import Footer from "../Footer";
-import { DeviceType } from "@/types/device";
-import { useEffect, useState } from "react";
-import { getDictionary } from "@/lib/dictionary";
-import useLocale from "@/hooks/useLocale";
-import { PageData } from "@/contexts/locale.context/locale.context";
 
 interface PageDetailProps {
   dict: PageData;
   lang: string;
 }
 
-export default function PageDetail({
-  dict: passedDict,
-  lang,
-}: PageDetailProps) {
+export default function PageDetail({ dict: passedDict, lang }: PageDetailProps) {
   const { setLocale, setDict } = useLocale();
 
   const [device, setDevice] = useState<DeviceType>("Unknown");
@@ -80,6 +76,7 @@ export default function PageDetail({
           <Part4 windowWidth={windowWidth} />
           <Part5 />
           <Part6 />
+          <FAQ />
           <Part7 device={device} />
           <Footer />
         </>
