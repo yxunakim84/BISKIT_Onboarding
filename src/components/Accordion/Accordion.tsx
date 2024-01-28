@@ -1,4 +1,6 @@
+import colors from "@/theme/colors";
 import { useEffect, useRef, useState } from "react";
+import Icon from "../Icon";
 
 interface AccordionProps {
   title: string;
@@ -23,7 +25,7 @@ export default function Accordion({
     <div className="flex flex-col border-b border-border-strong">
       {/* title */}
       <button
-        className="w-full text-start text-content-default mobile:py-4 mobile:text-body16Sb laptop:py-5 laptop:text-heading24Bd"
+        className="flex w-full justify-between gap-x-4 text-start text-content-default mobile:py-4 mobile:text-body16Sb laptop:py-5 laptop:text-heading24Bd"
         onClick={() => {
           if (passedHandleClickAccordion) passedHandleClickAccordion();
           else {
@@ -32,6 +34,12 @@ export default function Accordion({
         }}
       >
         <div>{title}</div>
+        <Icon
+          name="Chevron"
+          rotate={isOpen ? 180 : 0}
+          color={colors.content.default}
+          className="shrink-0 transform duration-300 mobile:h-6 mobile:w-6 laptop:h-8 laptop:w-8"
+        />
       </button>
       {/* description */}
       <div
