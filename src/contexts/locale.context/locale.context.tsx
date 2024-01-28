@@ -15,7 +15,8 @@ export type PageKey =
   | "page4"
   | "page5"
   | "page6"
-  | "page7"; // 다른 키 추가
+  | "page7"
+  | "applyButton"; // 다른 키 추가
 
 export type Page = {
   title: string;
