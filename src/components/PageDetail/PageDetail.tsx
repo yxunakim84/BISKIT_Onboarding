@@ -2,7 +2,9 @@
 
 import { PageData } from "@/contexts/locale.context/locale.context";
 import useLocale from "@/hooks/useLocale";
+// import * as gtag from "@/lib/gtag";
 import { DeviceType } from "@/types/device";
+// import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import FAQ from "../FAQ";
 import Footer from "../Footer";
@@ -21,6 +23,7 @@ interface PageDetailProps {
 
 export default function PageDetail({ dict: passedDict, lang }: PageDetailProps) {
   const { setLocale, setDict } = useLocale();
+  // const pathname = usePathname();
 
   const [device, setDevice] = useState<DeviceType>("Unknown");
   const [windowWidth, setWindowWidth] = useState(0);
@@ -65,6 +68,12 @@ export default function PageDetail({ dict: passedDict, lang }: PageDetailProps) 
 
     return () => window.removeEventListener("resize", updateWindowDimensions);
   }, []);
+
+  // useEffect(() => {
+  //   if (pathname) {
+  //     gtag.pageview(pathname);
+  //   }
+  // }, [pathname]);
 
   return (
     <main className="w-screen">
