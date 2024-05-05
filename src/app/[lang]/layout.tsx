@@ -1,7 +1,8 @@
 import { pretendard } from "@/theme/font";
+import { Locale } from "@/types/locale";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import "../../app/globals.css";
-import { Locale } from "@/types/locale";
 
 export const metadata: Metadata = {
   title: "biskit",
@@ -14,18 +15,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-  params,
-}: {
-  children: React.ReactNode;
-  params: { lang: Locale };
-}) {
+export default function RootLayout({ children, params }: { children: React.ReactNode; params: { lang: Locale } }) {
   return (
     <html lang={params.lang} className={pretendard.className}>
       <body id="body" className="h-screen antialiased">
         {children}
       </body>
+      <GoogleAnalytics gaId="G-1B5D11GK85" />
     </html>
   );
 }
