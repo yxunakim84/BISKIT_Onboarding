@@ -36,6 +36,14 @@ export default function Accordion({
         <div>{title}</div>
         <Icon
           name="Chevron"
+          // width={32}
+          // height={32}
+          rotate={isOpen ? 180 : 0}
+          color={colors.content.default}
+          className="shrink-0 transform duration-300 mobile:h-6 mobile:w-6 laptop:h-8 laptop:w-8"
+        />
+        <Icon
+          name="Chevron"
           rotate={isOpen ? 180 : 0}
           color={colors.content.default}
           className="shrink-0 transform duration-300 mobile:h-6 mobile:w-6 laptop:h-8 laptop:w-8"
