@@ -4,7 +4,6 @@ import { PageData } from "@/contexts/locale.context/locale.context";
 import useLocale from "@/hooks/useLocale";
 import { DeviceType } from "@/types/device";
 import { useEffect, useState } from "react";
-import FAQ from "../FAQ";
 import Footer from "../Footer";
 import Part1 from "../Part1";
 import Part2 from "../Part2";
@@ -76,7 +75,7 @@ export default function PageDetail({ dict: passedDict, lang }: PageDetailProps) 
           <Part4 windowWidth={windowWidth} />
           <Part5 />
           <Part6 />
-          <FAQ />
+          {/* <FAQ /> */}
           <Part7 device={device} />
           <Footer />
         </>
